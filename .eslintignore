@@ -1,7 +1,5 @@
-/*.js
-node_modules
-dist
 **/*.js
+/*.js
 node_modules
 build
 /src/react-app-env.d.ts

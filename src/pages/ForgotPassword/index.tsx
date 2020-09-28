@@ -16,7 +16,6 @@ import api from '../../services/api';
 
 interface ForgotPasswordFormData {
   email: string;
-  password: string;
 }
 
 const ForgotPassword: React.FC = () => {

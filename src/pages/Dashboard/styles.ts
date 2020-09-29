@@ -3,7 +3,7 @@ import { shade } from 'polished';
 
 export const Container = styled.div``;
 
-export const Header = styled.div`
+export const Header = styled.header`
   padding: 32px 0;
   background: #28262e;
 `;
@@ -52,8 +52,13 @@ export const Profile = styled.div`
       color: #f4ede8;
     }
 
-    strong {
+    a {
+      text-decoration: none;
       color: #ff9000;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 `;
@@ -177,7 +182,7 @@ export const Appointment = styled.div`
     margin-left: auto;
     display: flex;
     align-items: center;
-    color: #999591;
+    color: #f4ede8;
     width: 70px;
 
     svg {
@@ -213,13 +218,12 @@ export const Calendar = styled.aside`
   width: 380px;
 
   .DayPicker {
+    background: #28262e;
     border-radius: 10px;
   }
 
   .DayPicker-wrapper {
     padding-bottom: 0;
-    background: #3e3b47;
-    border-radius: 10px;
   }
 
   .DayPicker,
@@ -227,33 +231,10 @@ export const Calendar = styled.aside`
     width: 100%;
   }
 
-  .DayPicker-NavButton {
-    color: #999591 !important;
-  }
-
-  .DayPicker-NavButton--prev {
-    right: auto;
-    left: 1.5em;
-    margin-right: 0;
-  }
-
   .DayPicker-Month {
     border-collapse: separate;
     border-spacing: 8px;
-    margin: 16px 0 0 0;
-    padding: 16px;
-    background-color: #28262e;
-    border-radius: 0 0 10px 10px;
-  }
-
-  .DayPicker-Caption {
-    margin-bottom: 1em;
-    padding: 0 1em;
-    color: #f4ede8;
-
-    > div {
-      text-align: center;
-    }
+    margin: 16px;
   }
 
   .DayPicker-Day {

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import React, { useEffect } from 'react';
 import {
   FiAlertCircle,
@@ -33,7 +32,7 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [message.id, removeToast]);
+  }, [removeToast, message.id]);
 
   return (
     <Container
@@ -42,12 +41,13 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
       style={style}
     >
       {icons[message.type || 'info']}
+
       <div>
         <strong>{message.title}</strong>
-        <p>{message.description}</p>
+        {message.description && <p>{message.description}</p>}
       </div>
 
-      <button type="button" onClick={() => removeToast(message.id)}>
+      <button onClick={() => removeToast(message.id)} type="button">
         <FiXCircle size={18} />
       </button>
     </Container>

@@ -1,12 +1,13 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "airbnb",
+    "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
@@ -23,19 +24,19 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react-hooks",
     "react",
+    "react-hooks",
     "@typescript-eslint",
     "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-props-no-spreading": "off",
     "no-unused-expressions": "off",
-    "react/prop-types": "off",
-    "import/no-duplicates": "off",
-    "@typescript-eslint/camelcase": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -45,6 +46,9 @@
       }
     ],
     "import/prefer-default-export": "off",
+    "import/no-duplicates": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
@@ -58,8 +62,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ],
-    "prettier/prettier": "error"
+    ]
   },
   "settings": {
     "import/resolver": {

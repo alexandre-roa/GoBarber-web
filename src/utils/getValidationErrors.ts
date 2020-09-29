@@ -5,10 +5,11 @@ interface Errors {
 }
 
 export default function getValidationErrors(err: ValidationError): Errors {
-  const validationErros: Errors = {};
-  err.inner.forEach(error => {
-    validationErros[error.path] = error.message;
+  const validationErrors: Errors = {};
+
+  err.inner.forEach((error) => {
+    validationErrors[error.path] = error.message;
   });
 
-  return validationErros;
+  return validationErrors;
 }

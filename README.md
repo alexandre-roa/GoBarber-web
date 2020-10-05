@@ -3,9 +3,6 @@
   <img src="./readmeFiles/Logo.png" alt="GoBarber" width="300">
 <br>
 </h1>
-
-<p align="center">Barbers Marketplace</p>
-
 <div align="center" >
   <img src="./readmeFiles/Cover.png" alt="cover" height="425">
   <img src="./readmeFiles/Logon.png" alt="Sign in page" height="425">
